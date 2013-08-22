@@ -12,7 +12,16 @@
  * @author RTT
  */
 class SEParser {
-    //put your code here
+    public $IO;
+    public $db;
+    function __construct() {
+        require_once 'Database.php';
+        require_once 'IO.php';
+        require_once 'phpQuery.php';
+        
+        $this->db = Database::getInstance();
+        $this->IO = new IO();
+    }
 }
 
 ?>
